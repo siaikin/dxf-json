@@ -58,6 +58,7 @@ import { SectionEntityParser } from "./section";
 import { SolidEntityParser } from "./solid";
 import { Solid3DEntityParser } from "./solid3d";
 import { SplineEntityParser } from "./spline";
+import { TableEntityParser } from "./table";
 import { TextEntityParser } from "./text";
 import { ToleranceEntityParser } from "./tolerance";
 import { HatchEntityParser } from "./hatch";
