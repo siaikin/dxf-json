@@ -82,6 +82,7 @@ export const CommonEntitySnippets: DXFParserSnippet[] = [
     {
         code: 310,
         name: 'proxyEntity',
+        isMultiple: true,
         parser: Identity,
     },
     {
@@ -140,6 +141,9 @@ export const CommonEntitySnippets: DXFParserSnippet[] = [
     },
     {
         code: 100, // AcDbEntity를 소모시키기 위함
+    },
+    {
+        code: 160, // Unknown data
     },
     {
         code: 330,
