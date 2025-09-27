@@ -1,6 +1,7 @@
 export type * from './types'
 export * from './consts'
 export * from './dictionary'
+export * from './imageDef'
 export * from './layout'
 export * from './plotSettings'
 export * from './spatial_filter'

@@ -23,6 +23,7 @@ export * from "./section";
 export * from "./solid";
 export * from "./solid3d";
 export * from "./spline";
+export * from "./table";
 export * from "./text";
 export * from "./tolerance";
 export * from "./vertex";
