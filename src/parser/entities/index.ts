@@ -96,7 +96,7 @@ const Parsers = Object.fromEntries(
 		SolidEntityParser,
 		Solid3DEntityParser,
 		SplineEntityParser,
-    TableEntityParser,
+		TableEntityParser,
 		TextEntityParser,
 		ToleranceEntityParser,
 		HatchEntityParser,
