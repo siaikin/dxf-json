@@ -110,7 +110,9 @@ export const CommonEntitySnippets: DXFParserSnippet[] = [
         name: 'colorIndex',
         parser(curr, _, entity) {
             const colorIndex = curr.value;
-            entity.color = getAcadColor(Math.abs(colorIndex));
+            if (colorIndex > 0 && colorIndex < 256) {
+                entity.color = getAcadColor(Math.abs(colorIndex));
+            }
             return colorIndex;
         },
     },
