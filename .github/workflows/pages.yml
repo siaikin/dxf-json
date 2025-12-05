@@ -1,10 +1,10 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Pages
+name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,20 +44,17 @@ jobs:
        
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        working-directory: ./bindings/javascript
 
       - name: Build demo pages
         run: pnpm build-pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: './examples/'
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
