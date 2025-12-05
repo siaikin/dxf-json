@@ -47,17 +47,7 @@ jobs:
         working-directory: ./bindings/javascript
 
       - name: Build demo pages
-        run: pnpm build
-        working-directory: ./bindings/javascript
-
-      - name: Build API docs
-        run: pnpm doc
-        working-directory: ./bindings/javascript
-
-      - name: Prepare GitHub Pages content
-        run: |
-          mkdir -p ./bindings/javascript/examples/docs
-          cp -r ./bindings/javascript/docs/* ./bindings/javascript/examples/docs/
+        run: pnpm build-pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -66,7 +56,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './bindings/javascript/examples/'
+          path: './examples/'
 
       - name: Deploy to GitHub Pages
         id: deployment
